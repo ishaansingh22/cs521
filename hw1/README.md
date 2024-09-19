@@ -40,6 +40,36 @@ Key components of the function:
 - Gradient-based perturbations are applied iteratively.
 - After each step, the adversarial examples are projected back into the $\epsilon$-ball and clipped to maintain valid image values.
 
+#### FGSM Implementation
+
+The Fast Gradient Sign Method (FGSM) is a one-step adversarial attack method that perturbs the input by moving it in the direction of the gradient of the loss function. This method is faster than PGD since it only requires one gradient computation.
+
+The following is the implementation of the FGSM attack used in the training process:
+
+```python
+def fgsm(model, x, y, eps):
+    model.eval()
+    model.zero_grad()
+    
+    x_cp = x.clone().detach().requires_grad_(True)
+    
+    with torch.enable_grad():
+        out = model(x_cp)
+        loss = torch.nn.functional.cross_entropy(out, y)
+        loss.backward()
+        x_adv = x_cp + eps * x_cp.grad.sign()
+        x_adv = torch.clamp(x_adv, 0, 1)
+    
+    return x_adv.detach()
+```
+
+Key elements of the FGSM function:
+- **One-step gradient update**: The gradient of the loss with respect to the input is computed, and a perturbation proportional to the sign of this gradient is added to the input.
+- **Epsilon ($\epsilon$)**: Controls the magnitude of the perturbation.
+- **Clipping**: Ensures that the perturbed input remains within the valid range for image data (between 0 and 1).
+
+FGSM provides a quicker way to generate adversarial examples compared to PGD but is often less effective for larger perturbation magnitudes due to its single-step nature.
+
 ### Model Training and Testing
 
 The training function allows for adversarial training using the generated PGD or FGSM attacks. When `enable_defense` is set to `True`, adversarial examples are generated during each batch of training. Otherwise, the model is trained on standard (non-adversarial) data.
@@ -110,4 +140,7 @@ This shows that the adversarially trained model is more resilient to both PGD an
 
 ### Conclusion
 
-Adversarial training significantly enhances the model's robustness against PGD and FGSM-based attacks, particularly for smaller perturbation magnitudes. However, as the perturbation magnitude increases, the effectiveness of adversarial training diminishes. This highlights the inherent trade-off between achieving high accuracy on clean data and ensuring robustness to adversarial attacks.
+Adversarial training significantly enhances the model's robustness against PGD and FGSM-based attacks, particularly for smaller perturbation magnitudes. However, as the perturbation magnitude increases, the effectiveness of adversarial training diminishes. This highlights the inherent trade-off between achieving high accuracy on clean data and ensuring robustness to adversarial attacks. While FGSM is a faster adversarial attack, the single-step nature makes it slightly less effective compared to multi-step attacks like PGD. Nevertheless, FGSM-based adversarial training still leads to notable improvements in model robustness, especially for smaller $\epsilon$ values.
+
+
+Here’s the content specifically for **FGSM** based on the previous content and code provided. I will also suggest where to insert it in the document and how to update the results and conclusions accordingly.
