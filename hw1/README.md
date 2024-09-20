@@ -141,6 +141,3 @@ This shows that the adversarially trained model is more resilient to both PGD an
 ### Conclusion
 
 Adversarial training significantly enhances the model's robustness against PGD and FGSM-based attacks, particularly for smaller perturbation magnitudes. However, as the perturbation magnitude increases, the effectiveness of adversarial training diminishes. This highlights the inherent trade-off between achieving high accuracy on clean data and ensuring robustness to adversarial attacks. While FGSM is a faster adversarial attack, the single-step nature makes it slightly less effective compared to multi-step attacks like PGD. Nevertheless, FGSM-based adversarial training still leads to notable improvements in model robustness, especially for smaller $\epsilon$ values.
-
-
-Here’s the content specifically for **FGSM** based on the previous content and code provided. I will also suggest where to insert it in the document and how to update the results and conclusions accordingly.
