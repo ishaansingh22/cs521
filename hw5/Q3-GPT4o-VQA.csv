@@ -1,0 +1,22 @@
+question_id,question_text,image_filename,complementary_question_id,complementary_question_text,model_response,is_correct
+318114001,Is this acidic food?,COCO_val2014_000000318114.jpg,306889001,Is this acidic food?,"Yes, this image contains acidic food. The orange juice and orange slice shown are acidic due to their natural citric acid content.",1
+306889001,Is this acidic food?,COCO_val2014_000000306889.jpg,318114001,Is this acidic food?,"No, this food is not inherently acidic.",1
+28714002,Is there a graffiti on the wall?,COCO_val2014_000000028714.jpg,426166003,Is there a graffiti on the wall?,Yes there is a graffiti on the wall.,1
+426166003,Is there a graffiti on the wall?,COCO_val2014_000000426166.jpg,28714002,Is there a graffiti on the wall?,"No, there is no graffiti on the wall.",1
+546721000,Are these boats docked?,COCO_val2014_000000546721.jpg,513115004,Are these boats docked?,"Yes, these boats are docked.",1
+513115004,Are these boats docked?,COCO_val2014_000000513115.jpg,546721000,Are these boats docked?,"No, these boats are not docked; they are anchored in the water.",1
+245874002,What is in the mug?,COCO_val2014_000000245874.jpg,515660010,What is in the mug?,"The mug likely contains a hot beverage such as coffee or tea, as indicated by the presence of a spoon inside it.",1
+515660010,What is in the mug?,COCO_val2014_000000515660.jpg,245874002,What is in the mug?,"The mug in the image likely contains a sauce or dip, as it is placed alongside the shrimp and lemon on the plate.",0
+245874000,Is this a healthy meal?,COCO_val2014_000000245874.jpg,50829095,Is this a healthy meal?,"Yes, this is a relatively healthy meal. It includes a balanced variety of food items such as a grapefruit (fruit), toast (carbohydrates), and yogurt (protein and probiotics). The drink in the mug, if it's tea or coffee without excessive sugar, can also be a healthy choice.",1
+50829095,Is this a healthy meal?,COCO_val2014_000000050829.jpg,245874000,Is this a healthy meal?,"This meal is not particularly healthy due to the presence of a burger and fries, which are often high in calories, saturated fats, and sodium. However, it does include some vegetables (pickles or a small salad) that add nutritional value. Overall, it is more indulgent than healthy.",1
+436127003,What animal is in the photo?,COCO_val2014_000000436127.jpg,208549005,What animal is in the photo?,The animal in the photo is a horse.,1
+208549005,What animal is in the photo?,COCO_val2014_000000208549.jpg,436127003,What animal is in the photo?,The animal in the photo is a cow or a steer.,1
+271639002,What does the woman have in her hand?,COCO_val2014_000000271639.jpg,283217021,What does the woman have in her hand?,The woman has a tennis racket in her hand.,1
+283217021,What does the woman have in her hand?,COCO_val2014_000000283217.jpg,271639002,What does the woman have in her hand?,The woman has an umbrella in her hand.,1
+271639001,What sport is this woman playing?,COCO_val2014_000000271639.jpg,201561030,What sport is this woman playing?,The woman is playing tennis.,1
+201561030,What sport is this woman playing?,COCO_val2014_000000201561.jpg,271639001,What sport is this woman playing?,"The image shows a person near a frisbee, suggesting they might be playing frisbee or a related sport like Ultimate Frisbee. However, the person in the image is not necessarily a woman.",1
+37846002,What color are the skiers shoes?,COCO_val2014_000000037846.jpg,412966001,What color are the skiers shoes?,The skier's shoes are yellow.,1
+412966001,What color are the skiers shoes?,COCO_val2014_000000412966.jpg,37846002,What color are the skiers shoes?,The skier's shoes are black.,0
+28714000,Is anyone riding the bike?,COCO_val2014_000000028714.jpg,277005003,Is anyone riding the bike?,"No, no one is riding the bike. It is stationary and parked.",1
+277005003,Is anyone riding the bike?,COCO_val2014_000000277005.jpg,28714000,Is anyone riding the bike?,"Yes, someone is riding the bike.",1
+,,,,,,18/20
